@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 400px;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.card-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 8px;
+  margin-left: 140px;
+}
+
+.card-subtitle {
+  font-size: 14px;
+  color: #666666;
+}
+
+.custom-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333333;
+}
+
+.full-width {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline {
+  color: #cccccc;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-thicker {
+  border-width: 2px;
+}
+
+::ng-deep
+  .mat-form-field-appearance-outline.mat-focused
+  .mat-form-field-outline-thicker {
+  color: #667eea;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+  padding: 12px 0;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+  padding-bottom: 0;
+}
+
+::ng-deep .mat-input-element {
+  font-size: 14px;
+  color: #333333;
+}
+
+.input-icon {
+  color: #667eea;
+  margin-right: 8px;
+}
+
+.submit-button {
+  margin-top: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #667eea;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #5a6fd1;
+}
+.submit-button:disabled {
+  background-color: #cccccc;
+}
+
+.card-actions {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.login-text {
+  font-size: 14px;
+  color: #666666;
+}
+
+.login-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.login-link:hover {
+  color: #5a6fd1;
+  text-decoration: underline;
+}
