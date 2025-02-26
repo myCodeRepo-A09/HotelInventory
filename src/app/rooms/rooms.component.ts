@@ -22,7 +22,7 @@ export class RoomsComponent implements OnInit,DoCheck,AfterContentInit,AfterCont
   userForm:FormGroup
   constructor(private dataService: DataService,@Inject(APP_SERVICE_CONFIG) private appConfig:AppConfig) { 
     console.log('API ENDPOINT',this.appConfig.apiEndpoint)
-   this.dataService.currentMessage.subscribe(data=> this.message=data)
+  // this.dataService.currentMessage.subscribe(data=> this.message=data)
 
    this.userForm=new FormGroup({
     name:new FormControl('',[Validators.required,Validators.minLength(3)]),
@@ -79,9 +79,9 @@ export class RoomsComponent implements OnInit,DoCheck,AfterContentInit,AfterCont
 
   ngOnInit(): void {
     console.log('ngOnInit')
-    this.dataService.getPosts().subscribe((data) => {
-      this.myPost = data; // Store API data
-    });
+    // this.dataService.getPosts().subscribe((data) => {
+    //   this.myPost = data; // Store API data
+    // });
   }
  ngDoCheck():any{
   console.log('doCheck')
@@ -111,7 +111,7 @@ ngOnDestroy() {
   }
 
   setCurrentMessage(message:string){
-    this.dataService.changeMessage(message)
+    //this.dataService.changeMessage(message)
   }
 
   onSubmit(){

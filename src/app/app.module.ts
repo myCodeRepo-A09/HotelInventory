@@ -23,6 +23,8 @@ import {MatDividerModule} from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { AuthmoduleModule } from './authmodule/authmodule.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +54,9 @@ import { MatListModule } from '@angular/material/list';
     MatDividerModule,
     MatSidenavModule,
     MatToolbarModule,
-    MatListModule
+    MatListModule,
+    MatSnackBarModule,
+    AuthmoduleModule
 
   ],
   providers: [{
@@ -66,12 +70,12 @@ import { MatListModule } from '@angular/material/list';
 }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }import { ResquestInterceptor } from 'src/Interceptor/resquest.interceptor';
+export class AppModule { }import { ResquestInterceptor } from 'src/app/Interceptor/resquest.interceptor';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RoomListComponent } from './rooms/room-list/room-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './authmodule/authcomponent/sign-up/sign-up.component';
+import { LoginComponent } from './authmodule/authcomponent/login/login.component';
 
 
 

@@ -4,16 +4,19 @@ import { RoomsComponent } from './rooms/rooms.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { RoomListComponent } from './rooms/room-list/room-list.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-import { LoginComponent } from './login/login.component';
+
+import { AuthcomponentComponent } from './authmodule/authcomponent/authcomponent.component';
+import { AuthmoduleModule } from './authmodule/authmodule.module';
 
 const routes: Routes = [
+  {path:'avianhotels',
+    loadChildren:()=>import('./authmodule/authmodule.module').then(m=>m.AuthmoduleModule)
+  },
   {path:'rooms',component:RoomsComponent},
-  {path:'signUp',component:SignUpComponent},
-  {path:'login',component:LoginComponent},
   {path:'rooms/:id',component:RoomListComponent},
   {path:'employee',component:EmployeeComponent},
-  {path:'',redirectTo:'rooms',pathMatch:'full'},
+  {path:'',redirectTo:'avianhotels',pathMatch:'full'},
+  
   {path:'**',component:NotFoundComponent}
 ];
 

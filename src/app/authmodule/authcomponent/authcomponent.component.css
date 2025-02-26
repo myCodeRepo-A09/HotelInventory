@@ -1,0 +1,35 @@
+/* Toolbar Styles */
+.spacer {
+  flex: 1 1 auto;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background-image: url("https://via.placeholder.com/1920x600"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* About Section Styles */
+.about-section {
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 2rem;
+  text-align: center;
+}
